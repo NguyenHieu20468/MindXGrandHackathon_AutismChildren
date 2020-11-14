@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>LIEN HE | AUTISM CHILDREN</title>
+  <%- include('./head.ejs') %>
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <%- include('./header.ejs') %>
+
+  <main id="main">
+
+    <!--==========================
+      Contact Section
+    ============================-->
+    <div id="contact" class="section-bg wow fadeInUp">
+        <div class="container">
+  
+          <div class="section-header">
+            <h3>Liên hệ với chúng tôi</h3>
+            <p>Để được trực tiếp giải đáp mọi thắc mắc về dịch vụ mà AUTISM CHILDREN cung cấp và được hướng dẫn xử lý các trường hợp phát sinh, quý khách vui lòng liên hệ Trung tâm Chăm sóc, hỗ trợ khách hàng AUTISM CHILDREN</p>
+          </div>
+  
+          <div class="row contact-info">
+  
+            <div class="col-md-4">
+              <div class="contact-address">
+                <i class="ion-ios-location-outline"></i>
+                <h3>Địa chỉ</h3>
+                <address>Bình Thạnh, Hồ Chí Minh, Việt Nam</address>
+              </div>
+            </div>
+  
+            <div class="col-md-4">
+              <div class="contact-phone">
+                <i class="ion-ios-telephone-outline"></i>
+                <h3>Số điện thoại</h3>
+                <p><a href="tel:+937526xxx">+94 375 26 xxx</a></p>
+              </div>
+            </div>
+  
+            <div class="col-md-4">
+              <div class="contact-email">
+                <i class="ion-ios-email-outline"></i>
+                <h3>Email</h3>
+                <p><a href="mailto:info@example.com">info@example.com</a></p>
+              </div>
+            </div>
+  
+          </div>
+  
+          <div class="form">
+            <div id="sendmessage">Tin nhắn phản hồi của bạn đã được gửi đi. Chúng tôi sẽ nhanh chóng phản hồi lại. Chân thành cảm ơn!</div>
+            <div id="errormessage"></div>
+            <form action="" method="post" role="form" class="contactForm">
+              <div class="form-row">
+                <div class="form-group col-md-6">
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" data-rule="minlen:4" data-msg="Vui lòng nhập ít nhất 4 ký tự" />
+                  <div class="validation"></div>
+                </div>
+                <div class="form-group col-md-6">
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" data-rule="email" data-msg="Vui lòng nhập đúng email" />
+                  <div class="validation"></div>
+                </div>
+              </div>
+              <div class="form-group">
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" data-rule="minlen:4" data-msg="Vui lòng nhập ít nhất 8 ký tự của chủ đề" />
+                <div class="validation"></div>
+              </div>
+              <div class="form-group">
+                <textarea class="form-control" name="message" rows="5" data-rule="required" data-msg="Vui lòng nhập tại đây" placeholder="Message"></textarea>
+                <div class="validation"></div>
+              </div>
+              <div class="text-center"><button type="submit">Gửi tin</button></div>
+            </form>
+          </div>
+  
+        </div>
+    </div><!-- #contact -->
+
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <%- include('./footer.ejs') %>
+</body>
+</html>

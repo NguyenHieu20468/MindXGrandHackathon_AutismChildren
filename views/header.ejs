@@ -1,0 +1,28 @@
+<header id="header">
+    <div class="container-fluid">
+
+        <div id="logo" class="pull-left">
+            <h1><a href="/"><img src="img/logo/logo.png" alt="" title=""></a></h1>
+            <!-- Uncomment below if you prefer to use an image logo -->
+            <!-- <a href="#intro"><img src="img/logo.png" alt="" title="" /></a>-->
+        </div>
+
+        <nav id="nav-menu-container">
+            <ul class="nav-menu">
+                <li class="menu-active"><a href="/">Trang Chủ</a></li>
+                <li><a href="gioithieu">Giới Thiệu</a></li>
+                <li><a href="lienhe">Liên Hệ</a></li>
+                <li><a href="khoahoc">Khóa Học</a></li>
+                <li><a href="lamkiemtra">Kiểm tra</a></li>
+                <li><a href="chatbot">Chatbot</a></li>
+                <li><a href="themhosotre">Thêm hồ sơ trẻ</a></li>
+                <% if(session.phuhuynh) { %>
+                <li><a href="dangxuat">Đăng Xuất</a></li>
+                <% } else { %>
+                <li><a href="dangnhap">Đăng Nhập</a></li>
+                <li><a href="dangky">Đăng Ký</a></li>
+                <% } %>
+            </ul>
+        </nav><!-- #nav-menu-container -->
+    </div>
+</header>

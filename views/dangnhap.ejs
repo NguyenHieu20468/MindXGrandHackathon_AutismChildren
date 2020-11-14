@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>DANG NHAP | AUTISM CHILDREN</title>
+  <%- include('./head.ejs') %>
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <%- include('./header.ejs') %>
+  <!-- #header -->
+
+  <!--==========================
+    Intro Section
+  ============================-->
+
+  <main id="main">
+    
+    <!--==========================
+      Contact Section
+    ============================-->
+    <section id="contact" class="section-bg wow fadeInUp">
+      <div class="container" style="max-width: 500px">
+
+        <div class="section-header">
+          <h3>Đăng nhập</h3>
+        </div>
+
+        <div class="form">
+          <form action="dangnhap" method="post" role="form" class="contactForm">
+            <div class="form-group">
+              <input id="email" type="email" class="form-control" name="email" placeholder="Email" />
+              <div class="validation"></div>
+            </div>
+            <div class="form-group">
+              <input id="password" type="password" class="form-control" name="password" placeholder="Mật khẩu" />
+              <div class="validation"></div>
+            </div>
+            <div class="text-center"><button type="submit" onclick="fnLogin()">Đăng nhập</button></div>
+          </form>
+        </div>
+
+
+      </div>
+    </section><!-- #contact -->
+
+  </main>
+
+  <!--==========================
+    Footer
+  ============================-->
+  <%- include('./footer.ejs') %>
+
+  <script>
+    function fnLogin(){
+      const email = document.getElementById('email').value
+      const password = document.getElementById('password').value
+      const data = {
+        email,
+        password
+      }
+      fetch(`http://localhost:1234/abc?email=${email}&password=${password}`).then(async data =>{
+        const {data: response} = await data.json()
+        if(response === 'ok'){
+          console.log('ok');
+          window.location.href = '/'
+        }
+        // console.log('abc', await data.json());
+      }).catch(e=> console.log('fetch error',e))
+    }
+  </script>
+
+</body>
+</html>
