@@ -195,8 +195,8 @@ router.post('/themhosotre', async (req, resp) => {
     }
 });
 
-router.get('/thuvien', async (req, resp) => {
-    resp.render('../views/thuvien.ejs');
+router.get('/khoahoc', async (req, resp) => {
+    resp.render('../views/khoahoc.ejs');
 });
 
 router.get('/blog', async (req, resp) => {

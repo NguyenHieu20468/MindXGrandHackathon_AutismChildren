@@ -155,9 +155,24 @@ h6 {
   margin: 0;
 }
 
+
+/*--------------------------------------------------------------
+# notification
+--------------------------------------------------------------*/
+#notification .carousel-content {
+  text-align: center;
+}
+#notification h3{
+  color: #EB3C27;
+  margin-bottom: 30px;
+  font-size: 25px;
+  font-weight: 700;
+}
+
 /*--------------------------------------------------------------
 # Intro Section
 --------------------------------------------------------------*/
+
 
 #intro {
   display: table;
