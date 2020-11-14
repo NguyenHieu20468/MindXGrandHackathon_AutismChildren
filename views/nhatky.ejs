@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>AUTISM CHILDREN</title>
+  <%- include('./head.ejs') %>
+</head>
+
+<body>
+
+  <!--==========================
+    Header
+  ============================-->
+  <%- include('./header.ejs') %>  
+  <!-- #header -->
+
+  <main id="main">
+
+    <main id="main">
+
+        <!--==========================
+          Dairy Section
+        ============================-->
+        <div id="dairy">
+            <form>
+            <fieldset>
+            <legend><span class="number">1</span>Thông tin chung</legend>
+            <input type="text" name="field1" placeholder="Tình Trạng sức khỏe*">
+            <label for="job">Tình trạng tâm lý:</label>
+            <select id="job" name="field4">
+            <optgroup label="Indoors">
+              <option value="vuive">Vui Vẻ</option>
+              <option value="buonba">Buồn Bã</option>
+              <option value="ngacnhien">Ngạc Nhiên</option>
+              <option value="sohai">Sợ Hãi</option>
+              <option value="giandu">Giận dữ</option>
+              <option value="ghetom">Ghê tởm</option>
+              <option value="khac">Other</option>
+            </optgroup>
+            <optgroup label="Outdoors">
+                <option value="vuive">Vui Vẻ</option>
+                <option value="buonba">Buồn Bã</option>
+                <option value="ngacnhien">Ngạc Nhiên</option>
+                <option value="sohai">Sợ Hãi</option>
+                <option value="giandu">Giận dữ</option>
+                <option value="ghetom">Ghê tởm</option>
+                <option value="khac">Other</option>
+            </optgroup>
+            </select>      
+            </fieldset>
+            <fieldset>
+            <legend><span class="number">2</span> Hành trình theo dõi trẻ</legend>
+            <textarea name="field3" placeholder="Hôm nay trẻ đã học như thế nào"></textarea>
+            </fieldset>
+            <input type="submit" value="Apply" />
+            </form>
+            </div>
+    
+    
+      </main>
+
+
+  </main>
+  <!--==========================
+    Footer
+  ============================-->
+  <%- include('./footer.ejs') %>
+
+</body>
+</html>

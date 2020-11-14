@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Thêm hồ sơ trẻ</title>
+    <%- include('./head.ejs') %>
+</head>
+
+<body>
+
+    <!--==========================
+    Header
+  ============================-->
+  <%- include('./header.ejs') %>  
+  <!-- #header -->
+
+    <main id="main">
+
+        <!--==========================
+      Contact Section
+    ============================-->
+        <section id="contact" class="section-bg wow fadeInUp">
+            <div class="container" style="max-width: 900px;">
+
+                <div class="section-header">
+                    <h3>Thêm hồ sơ trẻ</h3>
+                </div>
+
+                <div class="form">
+                    <form action="/themhosotre" method="post" role="form" class="contactForm" id="profile">
+                        <div class="form-row">
+                            <label>Họ tên trẻ</label>
+                            <div class="form-group col-md-12">
+                                <input type="text" name="ten" class="form-control" id="name" data-rule="minlen:1"
+                                    required />
+                                <div class="validation"></div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label>Năm sinh</label>
+                            <input type="number" name="namsinh" class="form-control" required />
+                        </div>
+                        <div class="form-group">
+                            <label>Giới tính</label>
+                            <br />
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="gioitinh">Nam
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" name="gioitinh">Nữ
+                                </label>
+                            </div>
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Trẻ được sinh tuần thứ mấy của thai kỳ?</label>
+                            <input type="number" class="form-control" name="tuansinh"/>
+                            <div class="validation"></div>
+                        </div>
+                        <div class="form-group">
+                            <label>Trẻ đã từng được chẩn đoán tự kỷ/chậm phát triển trí tuệ/rối loạn phát triển
+                                chưa?</label>
+                            <br />
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" onclick="yesnoCheck();" id="yesCheck"
+                                        name="diagnose">Rồi
+                                </label>
+                            </div>
+                            <div class="form-check-inline">
+                                <label class="form-check-label">
+                                    <input type="radio" class="form-check-input" onclick="yesnoCheck();"
+                                        name="diagnose">Chưa
+                                </label>
+                            </div>
+                            <div class="validation"></div>
+                        </div>
+
+                        <div id="ifYes" style="display:none">
+                            <div class="form-group">
+                                <label>Kết quả chẩn đoán</label>
+                                <br />
+                                <select name="ketquachuandoan" id="dropbox-result" style="width: 100%;">
+                                    <option disabled selected>Chọn</option>
+                                    <option value="Theo dõi tự kỷ">Theo dõi tự kỷ</option>
+                                    <option value="Rối loạn tự kỷ/Tự kỷ">Rối loạn tự kỷ/Tự kỷ</option>
+                                    <option value="Rối loạn phát triển">Rối loạn phát triển</option>
+                                    <option value="Rối loạn phát triển lan tỏa">Rối loạn phát triển lan tỏa</option>
+                                    <option value="Chậm phát triển">Chậm phát triển</option>
+                                    <option value="Tăng động, giảm chú ý">Tăng động, giảm chú ý</option>
+                                    <option value="RốI loạn giao tiếp">RốI loạn giao tiếp</option>
+                                    <option value="Trẻ phát triển bình thường">Trẻ phát triển bình thường</option>
+                                    <option value="Other">Khác</option>
+                                </select>
+                            </div>
+
+                            <div id="note-result" class="form-group col-md-12" style="display: none;">
+                                <label>Kết quả chẩn đoán</label>
+                                <input type="text" name="note-result" class="form-control" id="name"
+                             />
+                                <div class="validation"></div>
+                            </div>
+
+                            <script>
+                                document.getElementById("note-result").style.display = "none";
+
+                                var elem = document.getElementById("dropbox-result");
+                                elem.onchange = function () {
+                                    var hiddenDiv = document.getElementById("note-result");
+                                    hiddenDiv.style.display = (this.value == "Other") ? "block" : "none";
+                                };
+
+                            </script>
+
+                            <div class="form-group">
+                                <label>Số tháng tuổi của trẻ tại thời điểm chẩn đoán</label>
+                                <input type="number" class="form-control" name="sothangtuoi" />
+                                <div class="validation"></div>
+                            </div>
+                            <div class="form-group">
+                                <label>Nơi chẩn đoán</label>
+                                <br />
+                                <select name="noichuandoan" style="width: 100%;">
+                                    <option disabled selected>Chọn</option>
+                                    <option value="Bệnh viện Nhi Trung Ương">Bệnh viện Nhi Trung Ương</option>
+                                    <option value="Bệnh viện Đại học Y dược">Bệnh viện Đại học Y dược</option>
+                                    <option value="Bệnh viện Nhi Đồng 1">Bệnh viện Nhi Đồng 1</option>
+                                    <option value="Bệnh viện Nhi Đồng 2">Bệnh viện Nhi Đồng 2</option>
+                                    <option value="Bệnh viện Tỉnh">Bệnh viện Tỉnh</option>
+                                    <option value="Khác">Khác</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Người chẩn đoán</label>
+                                <br />
+                                <select name="nguoichuandoan" style="width: 100%;">
+                                    <option disabled selected>Chọn</option>
+                                    <option value="Bác sĩ chuyên khoa nhi">Bác sĩ chuyên khoa nhi</option>
+                                    <option value="Bác sĩ chuyên đa khoa">Bác sĩ chuyên đa khoa</option>
+                                    <option value="Cán bộ tâm lý">Cán bộ tâm lý</option>
+                                    <option value="Bác sĩ chuyên ngành khác">Bác sĩ chuyên ngành khác</option>
+                                    <option value="Y tá/Điều dưỡng">Y tá/Điều dưỡng</option>
+                                    <option value="Giáo viên mầm non">Giáo viên mầm non</option>
+                                    <option value="Giáo viên giáo dục đặc biệt">Giáo viên giáo dục đặc biệt</option>
+                                </select>
+                            </div>
+                            <div class="form-group">
+                                <label>Trẻ đã được sàng lọc trước đó bằng các bộ M-CHAT-R/F, ASQ-3, CARS chưa?</label>
+                                <br />
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" onclick="yesnoCheck();"
+                                            id="yesCheck" name="dasangloc">Rồi
+                                    </label>
+                                </div>
+                                <div class="form-check-inline">
+                                    <label class="form-check-label">
+                                        <input type="radio" class="form-check-input" onclick="yesnoCheck();"
+                                            name="dasangloc">Chưa
+                                    </label>
+                                </div>
+                                <div class="validation"></div>
+                            </div>
+                        </div>
+
+                        <div class="form-group" id="ifNo" style="display:none">
+                            <label>Trẻ có những triệu chứng nào dưới đây</label>
+                            <br />
+                            <input type="checkbox" id="symptom" name="symptom">
+                            <label for="symptom">Không trả lời, không có phản ứng khi có người gọi tên mình.</label><br>
+
+                            <input type="checkbox" id="symptom1" name="symptom">
+                            <label for="symptom1">Ngôn ngữ chậm trễ và hay lập lại lời người lớn</label><br>
+
+                            <input type="checkbox" id="symptom2" name="symptom">
+                            <label for="symptom2">Hay tự đánh mình khi khó chịu, căng thẳng và cũng hay tấn công người
+                                khác.</label><br>
+
+                            <input type="checkbox" id="symptom3" name="symptom">
+                            <label for="symptom3">Thường xuyên kích động, lăng xăng khó ở yên một chỗ.</label><br>
+
+                            <input type="checkbox" id="symptom4" name="symptom">
+                            <label for="symptom4">Rất ghét sự tiếp xúc, đụng chạm của người khác đến người của mình hoặc
+                                ngược lại, quá gắn bó, đeo bám.</label><br>
+
+                            <input type="checkbox" id="symptom4" name="symptom">
+                            <label for="symptom4">Khi đứng trước gương, nhìn vào mình một cách thờ ơ
+                                hoặc lại tỏ ra quá quan tâm như vặn vẹo, ôm hôn.</label><br>
+                        </div>
+
+                        <div class="text-center">
+                            <button type="submit">Lưu</button>
+                        </div>
+                    </form>
+                </div>
+
+            </div>
+        </section><!-- #contact -->
+
+        <script type="text/javascript">
+            function submitProfile() {
+                $('#profile').submit();
+            }
+
+            function yesnoCheck() {
+                if (document.getElementById('yesCheck').checked) {
+                    document.getElementById('ifYes').style.display = 'block';
+                    document.getElementById('ifNo').style.display = 'none';
+                }
+                else {
+                    document.getElementById('ifYes').style.display = 'none';
+                    document.getElementById('ifNo').style.display = 'block';
+                }
+            }
+
+        </script>
+
+    </main>
+
+    <!--==========================
+    Footer
+  ============================-->
+  <%- include('./footer.ejs') %>
+
+</body>
+
+</html>
