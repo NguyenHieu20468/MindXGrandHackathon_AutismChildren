@@ -17,5 +17,15 @@
   "bugs": {
     "url": "https://github.com/NguyenHieu20468/MindXGrandHackathon_AutismChildren/issues"
   },
-  "homepage": "https://github.com/NguyenHieu20468/MindXGrandHackathon_AutismChildren#readme"
+  "homepage": "https://github.com/NguyenHieu20468/MindXGrandHackathon_AutismChildren#readme",
+  "dependencies": {
+    "cors": "^2.8.5",
+    "ejs": "^3.1.5",
+    "express": "^4.17.1",
+    "express-session": "^1.17.1",
+    "express-validator": "^6.6.1",
+    "mongodb": "^3.6.3",
+    "mongoose": "^5.10.14",
+    "multer": "^1.4.2"
+  }
 }
