@@ -62,7 +62,9 @@
         email,
         password
       }
-      fetch(`http://localhost:1234/abc?email=${email}&password=${password}`).then(async data =>{
+      // const host = 'http://localhost:1234'
+      const host = 'https://714f460e49ef.ngrok.io'
+      fetch(`${host}/abc?email=${email}&password=${password}`).then(async data =>{
         const {data: response} = await data.json()
         if(response === 'ok'){
           console.log('ok');
