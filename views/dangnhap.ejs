@@ -63,7 +63,7 @@
         password
       }
       // const host = 'http://localhost:1234'
-      const host = 'https://714f460e49ef.ngrok.io'
+      const host = 'https://websiteautismchildren.herokuapp.com'
       fetch(`${host}/abc?email=${email}&password=${password}`).then(async data =>{
         const {data: response} = await data.json()
         if(response === 'ok'){

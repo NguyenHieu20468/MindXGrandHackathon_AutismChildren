@@ -1,0 +1,21 @@
+{
+  "name": "MindXGrandHackathon_AutismChildren",
+  "version": "1.0.0",
+  "description": "> THÀNH VIÊN TỰ HIỆN: TEAM AUTISM CHILDREN\r - LÀ PHƯƠNG TIỆN THEO DÕI TÌNH TRẠNG SỨC KHỎE CÔNG CỤ HỖ TRỢ HỌC TẬP\r - LÀ WEBSITE HỖ TRỢ BẬC PHỤ HUYNH, NHÀ TRƯỜNG CHUYÊN MÔN LÀM VIỆC VỚI TRẺ NHỎ TỰ KỶ  VỚI CÁC CÔNG TÁC CHỦ LỰC “ĐÁNH GIÁ – CAN THIỆP – KIẾN THỨC” CÙNG MỤC TIÊU “CAN THIỆP SỚM – PHÁT TRIỂN NHANH”\r > THÀNH VIÊN TỰ HIỆN: TEAM AUTISM CHILDREN\r - NGUYỄN HIẾU\r - TRẦN NGUYỄN BẢO NGỌC\r - NGUYỄN THỊ KIM NƯƠNG\r - HÀ THỊ NGỌC\r > GIAO DIỆN:\r - ĐÃ HOÀN THÀNH CÁC GIAO DIỆN (TRANG CHỦ - ĐĂNG NHẬP - ĐĂNG KÝ - LIÊN HỆ - KHÓA HỌC - KIỂM TRA - CHAT BOT - THÊM HỒ SƠ TRẺ)\r - ĐÃ HOÀN THÀNH CHỨC NĂNG (ĐĂNG NHẬP (USERNAME: EFG@GMAIL.COM VÀ PASSWORD: 126) - BOT CHAT GIAO TIẾP TIẾNG ANH)\r > CÁC NGUỒN DỮ LIỆU SỬ DỤNG BÊN NGOÀI:\r  - THƯ VIỆN CSS CỦA HTTPS://BOOTSTRAPMADE.COM/LICENSE/\r > MỤC ĐÍCH SỬ DỤNG: THAM DỰ CUỘC THI MINDX GRAND HACKATHON 2020",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NguyenHieu20468/MindXGrandHackathon_AutismChildren.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NguyenHieu20468/MindXGrandHackathon_AutismChildren/issues"
+  },
+  "homepage": "https://github.com/NguyenHieu20468/MindXGrandHackathon_AutismChildren#readme"
+}
